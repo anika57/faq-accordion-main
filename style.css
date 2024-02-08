@@ -1,0 +1,99 @@
+:root{
+    --White: hsl(0, 0%, 100%);
+    --lightpink: hsl(275, 100%, 97%);
+    --grayishpurple: hsl(292, 16%, 49%);
+    --darkpurple: hsl(292, 42%, 14%);
+}
+
+:root{
+    --font-inter:'Work Sans',sans-serif;
+}
+
+body {
+    font-family: var(--font-inter);
+    background-color: var(--lightpink);
+    margin: 0; /* Remove default body margin */
+    display: flex; /* Use flexbox for centering */
+    min-height: 100vh; /* Ensure content stretches to at least the full height of the viewport */
+  }
+
+  .headline {
+    display: inline-flex;
+    align-items: center; /* Align items vertically */
+    font-weight: bold; /* Make the heading bold */
+  }
+  
+  .headline img {
+    margin-right: 5px; /* Adjust spacing between image and text */
+  }
+  
+
+.header-image {
+    background-position: top right; /* Positions the image at the top right corner */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%; /* Makes sure the image spans the entire width of the viewport */
+    height: 100%; /* Makes sure the image spans the entire height of the viewport */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Move the image behind other content */
+  }
+  
+  
+.box {
+    width: 80%;
+    max-width: 400px; 
+    margin: auto;
+    background-color: var(--White);
+    border: 1px solid var(--White);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+
+.accordion {
+    background-color: var(--White);
+    color: var(--darkpurple);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 0.5px solid var(--White);
+    border-top: 0.1px solid gainsboro;
+    text-align: left;
+    outline: none;
+    font-size: 10px;
+    transition: 0.4s;
+    font-size: 12px;
+  }
+  
+  .active, .accordion:hover{
+    background-color: var(--White); 
+  }
+
+  .accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    color: var(--grayishpurple);
+    font-size: 12px;
+}
+  
